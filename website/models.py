@@ -15,6 +15,7 @@ class Contact(models.Model):
     nom = models.CharField(max_length=50)
     pays = models.CharField(max_length=30, choices=constants.Languages_Countries.countries) # Dropdown list with all the countries defined in the constants file
     ville = models.CharField(max_length=20)
+    lien_google_maps = models.TextField()
     email = models.CharField(max_length=80)
     numero_de_telephone = models.CharField(max_length=20)
     jours_d_ouverture = models.CharField(max_length=30) 
@@ -57,11 +58,11 @@ class Image(models.Model):
     
     
 class Message(models.Model):
-    nom = models.CharField(max_length=50, editable = False)
-    email = models.CharField(max_length=80, editable = False)
-    sujet = models.CharField(max_length=100, null=True, editable = False)
-    message = models.TextField(editable = False)
-    date_de_creation = models.DateTimeField(default=timezone.now, editable = False)
+    nom = models.CharField(max_length=50)
+    email = models.CharField(max_length=80)
+    sujet = models.CharField(max_length=100, null=True)
+    message = models.TextField()
+    date_de_creation = models.DateTimeField(default=timezone.now)
     
 
     

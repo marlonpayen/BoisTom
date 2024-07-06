@@ -42,6 +42,9 @@ admin.site.register(Image)
 
 class MessageAdmin(admin.ModelAdmin):
     list_display = ('date_de_creation', 'nom', 'sujet', 'email', 'message')
+    def has_change_permission(self, request, obj=None):
+        
+        return False
 
 admin.site.register(Message, MessageAdmin) 
 

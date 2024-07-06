@@ -17,11 +17,6 @@
 	    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 	    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 	
-	    <!-- Libraries Stylesheet -->
-	    <link href="static/website/lib/animate/animate.min.css" rel="stylesheet">
-	    <link href="static/website/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-	    <link href="static/website/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-	
 	    <!-- Customized Bootstrap Stylesheet -->
 	    <link href="static/website/css/bootstrap.min.css" rel="stylesheet">
 	
@@ -50,7 +45,7 @@
 	                </div>
 	                <div class="h-100 d-inline-flex align-items-center">
 	                	{% for lien in contact.lien_set.all %}
-	                    	<a class="btn btn-sm-square bg-white text-primary me-1" href="{{ lien.lien }}" target="_blank"><i class="fab {{ lien.social_media }}"></i></a>
+	                    	<a class="btn btn-square bg-white text-primary me-1" href="{{ lien.lien }}" target="_blank"><i class="fab {{ lien.social_media }}"></i></a>
 	                    {% endfor %}
 	                </div>
 	            </div>
@@ -68,10 +63,10 @@
 	        </button>
 	        <div class="collapse navbar-collapse" id="navbarCollapse">
 	            <div class="navbar-nav ms-auto p-4 p-lg-0">
-	                <a href="#home" class="nav-item nav-link active">Accueil</a>
-	                <a href="#about" class="nav-item nav-link">Qui sommes-nous?</a>
-	                <a href="#produits" class="nav-item nav-link">Produits</a>
-	                <a href="#contact" class="nav-item nav-link">Contactez-nous</a>
+	                <a href="../#accueil"  class="nav-item nav-link">Accueil</a>
+	                <a href="../#about"    class="nav-item nav-link">Qui sommes-nous?</a>
+	                <a href="../#produits" class="nav-item nav-link">Produits</a>
+	                <a href="../#contact"  class="nav-item nav-link">Contactez-nous</a>
 	            </div>
 	        </div>
 	    </nav>
@@ -113,10 +108,10 @@
 	                </div>
 	                <div class="col-lg-6 col-md-6 right">
 	                    <h4 class="text-light mb-4">Liens rapides</h4>
-	                    <a class="btn btn-link" href="#accueil">Accueil</a>
-	                    <a class="btn btn-link" href="#about">Qui sommes-nous?</a>
-	                    <a class="btn btn-link" href="#produits">Nos produits</a>
-	                    <a class="btn btn-link" href="#contact">Contactez-nous</a>
+	                    <a class="btn btn-link" href="../#accueil">Accueil</a>
+	                    <a class="btn btn-link" href="../#about">Qui sommes-nous?</a>
+	                    <a class="btn btn-link" href="../#produits">Nos produits</a>
+	                    <a class="btn btn-link" href="../#contact">Contactez-nous</a>
 	                </div>
 	            </div>
 	        </div>
@@ -134,8 +129,5 @@
 	        </div>
 	    </div>
 	    <!-- Footer End -->
-	
-	    <!-- Back to Top -->
-	    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 	</body>
 </html>

@@ -12,10 +12,6 @@
     font-weight: 700 !important;
 }
 
-.fw-black {
-    font-weight: 900 !important;
-}
-
 .back-to-top {
     position: fixed;
     display: none;
@@ -37,11 +33,6 @@
 }
 
 .btn-square {
-    width: 38px;
-    height: 38px;
-}
-
-.btn-sm-square {
     width: 32px;
     height: 32px;
 }
@@ -52,7 +43,6 @@
 }
 
 .btn-square,
-.btn-sm-square,
 .btn-lg-square {
     padding: 0;
     display: flex;
@@ -143,46 +133,6 @@
 	color: #fff;
 }
 
-.header-content {
-	width: 100%;
-	position: absolute;
-	left: 0;
-	top: 45%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	color: #fff;
-}
-
-.header-subtitle {
-	font-weight: 200;
-	font-size: calc(20px + (45 - 20) * ((100vw - 300px)/ (1600 - 300)));
-}
-
-.header-title {
-	font-size: calc(40px + (120 - 40) * ((100vw - 300px)/ (1600 - 300)));
-	font-weight: 700;
-	line-height: .7;
-	margin-bottom: 25px;
-	color: inherit;
-}
-
-.header-mono {
-	letter-spacing: 5px;
-	font-weight: 500;
-	font-size: calc(12px + (19 - 12) * ((100vw - 300px)/ (1600 - 300)));
-	margin-bottom: 40px;
-}
-
-.page-header {
-    background: linear-gradient(rgba(53, 53, 53, .7), rgba(53, 53, 53, .7)), url(../img/carousel-1.jpg) center center no-repeat;
-    background-size: cover;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-    color: var(--light);
-}
-
 
 /*** About ***/
 @media (min-width: 992px) {
@@ -209,21 +159,6 @@
 
 
 /*** Products ***/
-#portfolio-flters li {
-    display: inline-block;
-    font-weight: 500;
-    color: var(--dark);
-    cursor: pointer;
-    transition: .5s;
-    border-bottom: 2px solid transparent;
-}
-
-#portfolio-flters li:hover,
-#portfolio-flters li.active {
-    color: var(--primary);
-    border-color: var(--primary);
-}
-
 .portfolio-item img {
     transition: .5s;
 }
