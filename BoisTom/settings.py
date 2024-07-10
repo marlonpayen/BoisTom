@@ -30,7 +30,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['belgiquebois.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['boistom.onrender.com', '127.0.0.1', 'localhost']
 
 #ALLOWED_HOSTS = []
 
@@ -167,7 +167,7 @@ if not DEBUG:
     SESSION_COOKIE_SECURE = True
     SECURE_SSL_REDIRECT = True
     
-    CSRF_TRUSTED_ORIGINS = ['https://belgiquebois.onrender.com']
+    CSRF_TRUSTED_ORIGINS = ['https://boistom.onrender.com']
 
 # UNCOMMENT FOR DEBUG MODE
 HOST_SCHEME                     = "http://"
