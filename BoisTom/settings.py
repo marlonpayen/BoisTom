@@ -94,9 +94,12 @@ if not DEBUG:
     DATABASES = {
         'default': dj_database_url.config(
             # Replace this value with your local database's connection string.
-            default='postgresql://belgiquebois_user:fVyYiQHpOOi1XhdMbnN5du3EmDFj64Nr@dpg-cq83t02ju9rs73c28dt0-a/belgiquebois',
+            default='postgresql://belgiquebois_user:fVyYiQHpOOi1XhdMbnN5du3EmDFj64Nr@dpg-cq83t02ju9rs73c28dt0-a.frankfurt-postgres.render.com/belgiquebois',
             conn_max_age=600
-        )
+        ),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'belgiquebois',     
+        'PORT': '5432'
     }
 
 
