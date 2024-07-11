@@ -98,8 +98,11 @@ if not DEBUG:
             conn_max_age=600
         ),
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'belgiquebois',     
-        'PORT': '5432'
+        'NAME': 'belgiquebois',                      
+        'USER': 'belgiquebois_user',
+        'PASSWORD': 'fVyYiQHpOOi1XhdMbnN5du3EmDFj64Nr',
+        'HOST': 'dpg-cq83t02ju9rs73c28dt0-a',
+        'PORT': '5432',
     }
 
 
