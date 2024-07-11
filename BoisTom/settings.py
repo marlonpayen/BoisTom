@@ -168,15 +168,14 @@ if not DEBUG:
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
     
-    # COMMENT FOR DEBUG MODE
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
     SECURE_SSL_REDIRECT = True
     
     CSRF_TRUSTED_ORIGINS = ['https://boistom.onrender.com']
 
-# UNCOMMENT FOR DEBUG MODE
-HOST_SCHEME                     = "http://"
+if DEBUG:
+    HOST_SCHEME                     = "http://"
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 LOGGING = {
