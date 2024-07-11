@@ -94,7 +94,7 @@ if not DEBUG:
     DATABASES = {
         'default': dj_database_url.config(
             # Replace this value with your local database's connection string.
-            default='postgresql://postgres:postgres@localhost:5432/website',
+            default='postgresql://belgiquebois_user:fVyYiQHpOOi1XhdMbnN5du3EmDFj64Nr@dpg-cq83t02ju9rs73c28dt0-a/belgiquebois',
             conn_max_age=600
         )
     }
