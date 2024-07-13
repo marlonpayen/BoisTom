@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'BoisTom.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-if not DEBUG:
+if DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -93,19 +93,16 @@ if not DEBUG:
         }
     }
 
-if DEBUG:
+if not DEBUG:
     DATABASES = {
-        'default': dj_database_url.config(
-            # Replace this value with your local database's connection string.
-            default='postgresql://belgiquebois_user:fVyYiQHpOOi1XhdMbnN5du3EmDFj64Nr@dpg-cq83t02ju9rs73c28dt0-a.frankfurt-postgres.render.com/belgiquebois',
-            conn_max_age=600
-        ),
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'belgiquebois',                      
-        'USER': 'belgiquebois_user',
-        'PASSWORD': 'fVyYiQHpOOi1XhdMbnN5du3EmDFj64Nr',
-        'HOST': 'dpg-cq83t02ju9rs73c28dt0-a',
-        'PORT': '5432',
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'belgiquebois',                      
+            'USER': 'belgiquebois_user',
+            'PASSWORD': 'fVyYiQHpOOi1XhdMbnN5du3EmDFj64Nr',
+            'HOST': 'dpg-cq83t02ju9rs73c28dt0-a',
+            'PORT': '5432'
+        }
     }
 
 
