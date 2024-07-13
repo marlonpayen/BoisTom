@@ -32,7 +32,7 @@ load_dotenv()
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['boistom.onrender.com', '127.0.0.1', 'localhost']
 
 #ALLOWED_HOSTS = []
