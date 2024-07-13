@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'BoisTom.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-if DEBUG:
+if not DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -93,7 +93,7 @@ if DEBUG:
         }
     }
 
-if not DEBUG:
+if DEBUG:
     DATABASES = {
         'default': dj_database_url.config(
             # Replace this value with your local database's connection string.
