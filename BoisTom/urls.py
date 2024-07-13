@@ -23,19 +23,18 @@ from django.http import HttpResponse
 from BoisTom.settings import MEDIA_URL
 from BoisTom.settings import MEDIA_ROOT
 
-def response_error_handler(request, exception=None):
-    return HttpResponse("Error handler content", status=403)
+#def response_error_handler(request, exception=None):
+#    return HttpResponse("Error handler content", status=403)
 
 
-def permission_denied_view(request):
-    raise PermissionDenied
+#def permission_denied_view(request):
+#    raise PermissionDenied
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
     path('', views.index, name='index'),
     path('home', views.index, name='index'),
-    path('messagesent', views.send_message, name='form'),
-    path("403/", permission_denied_view)
+    path('messagesent', views.send_message, name='form')
 ] +static(MEDIA_URL, document_root=MEDIA_ROOT)
 
 handler404 = "website.views.my_custom_page_not_found_view"

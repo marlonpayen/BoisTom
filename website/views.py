@@ -53,18 +53,16 @@ def send_message(request):
     return render(request, template.render(context, request), {'form': form})
   
 def my_custom_page_not_found_view(request, *args, **argv):
-    response = render('website/404.html', {}, context_instance=RequestContext(request))
-    response.status_code = 404
-    return response
+    return render(request, 'website/404.html', status=404)
 
 def my_custom_error_view(request, *args, **argv):
-    return render(request, 'website/500.html')
+    return render(request, 'website/500.html', status=500)
 
 def my_custom_permission_denied_view(request, *args, **argv):
-    return render(request, 'website/403.html')
+    return render(request, 'website/403.html', status=403)
 
 def my_custom_bad_request_view(request, *args, **argv):
-    return render(request, 'website/400.html')
+    return render(request, 'website/400.html', status=400)
   
   
     
