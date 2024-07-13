@@ -32,7 +32,7 @@ load_dotenv()
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['boistom.onrender.com', '127.0.0.1', 'localhost']
 
 #ALLOWED_HOSTS = []
@@ -148,8 +148,8 @@ MEDIA_URL = '/media/'
 # Path where media is stored
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 print('Base dir : ' + BASE_DIR._str)
-print('Media root : ' + MEDIA_ROOT._str)
-print('Media url : ' + MEDIA_URL._str)
+print('Media root : ' + MEDIA_ROOT)
+print('Media url : ' + MEDIA_URL)
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
