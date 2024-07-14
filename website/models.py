@@ -53,7 +53,7 @@ class Lien(models.Model):
 
 
 class Image(models.Model):
-    image = models.ImageField(upload_to='media')
+    image = models.ImageField()
     produit = models.ForeignKey(Produit, on_delete=models.CASCADE)
     
     
