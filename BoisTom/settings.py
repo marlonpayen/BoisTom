@@ -141,7 +141,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Base url to serve media files
 MEDIA_URL = '/media/'
@@ -158,6 +157,8 @@ print('Media url : ' + MEDIA_URL)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+if DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 ########################################### Deployment ###########################################
 # This production code might break development mode, so we check whether we're in DEBUG mode
 if not DEBUG:
