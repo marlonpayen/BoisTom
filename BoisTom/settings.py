@@ -151,16 +151,13 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-if DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 ########################################### Deployment ###########################################
 # This production code might break development mode, so we check whether we're in DEBUG mode
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
     # and renames the files with unique names for each version to support long-term caching
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     
     SECURE_HSTS_SECONDS = 15780000  # 6 Months as Recommended
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
