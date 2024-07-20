@@ -132,7 +132,7 @@
 		                        <!--  Photos Slider -->
 		                        <div class="position-relative overflow-hidden">
 		                        	{% for image in produit.image_set.all %}
-		                            	<img class="mySlides{{ produit.id }}" src="{{ image.image.url }}" style="width:100%">
+		                            	<img class="mySlides{{ produit.id }}" src="{{ image.image.url }}" style="max-height: 400px; max-width:500px;">
 									{% endfor %}
 									
 									<div class="owl-nav">
