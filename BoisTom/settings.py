@@ -159,6 +159,9 @@ if not DEBUG:
     # and renames the files with unique names for each version to support long-term caching
     
     STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage",
+        },
         'staticfiles': {
             'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage',
         },
